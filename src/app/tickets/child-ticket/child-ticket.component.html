@@ -1,0 +1,27 @@
+<br>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-atom" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<main role="main" class="container">
+  <div class="jumbotron">
+    <h1>{{ticket.name}}</h1><br>
+    <div class="row">
+      <div class="col-sm">
+        <h6>Submitted at</h6><br>{{ticket.created_at | date: 'dd-MM-yyyy h:mm'}}
+      </div>
+      <div class="col-sm">
+        <h6>Label</h6><br>{{ticket.label}}
+      </div>
+      <div class="col-sm">
+        <h6>Status</h6><br>{{ticket.status}}
+      </div>
+      <div class="col-sm">
+        <h6>Priority</h6><br>{{ticket.priority}}
+      </div>
+      <div class="col-sm">
+        <h6>Assignee</h6><br>{{ticket.assignee_id}}
+      </div>
+      <hr>
+    </div><br>
+
+  </div>
+</main>
+<br>

@@ -1,0 +1,27 @@
+<br>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-atom" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+<br>
+<h1 class="tick"><b>Tickets Available</b></h1><br>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="padding-left: 150px; padding-right: 150px;">
+<div class="card container " *ngFor="let ticket of tickets" [routerLink]="'/tickets/'+ticket.id">
+
+
+  <div class="text">
+      <img src="../../assets/htpa7xmrzkjglxyhdrlw.png" alt="">
+      <h3>{{ ticket.name }}</h3>
+      <h5 style="color: rgb(243, 12, 12);">{{ticket.priority}}</h5>
+      <h6 style="color: rgb(72, 185, 255);">
+        {{ ticket.status }}
+      </h6>
+  </div>
+  <div class="links">
+      <a target="_blank" href="https://codepen.io/l-e-e/"><i class="fab fa-codepen"></i></a>
+      <a target="_blank" href="https://github.com/Leena26"><i class="fab fa-github"></i></a>
+      <a target="_blank" href="https://www.youtube.com/channel/UCPOyUi82bRcPTdpDuSHVNbw"><i class="fab fa-youtube"></i></a>
+      <div class="sub-main">
+        <button class="button-one">View Ticket</button>
+      </div>
+  </div>
+</div>
+</div>
+<br>
