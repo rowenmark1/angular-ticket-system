@@ -14,7 +14,7 @@ import { AppAuthService } from './app-auth.service';
 export class AppGuardGuard implements CanActivate {
   login = this._appAuthService.isLogin;
   constructor(private _appAuthService: AppAuthService) {}
-
+  //canActivate
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
