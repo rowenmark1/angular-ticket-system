@@ -12,7 +12,9 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class ProfileComponent implements OnInit {
 
   profile: any = '';
+  message: any = '';
   name = 'asdasdas';
+
 
 
   constructor(private _globalService: GlobalService,
@@ -30,5 +32,16 @@ export class ProfileComponent implements OnInit {
       });
       this.spinner.hide();
     }, 600);
+    }
+    updateProfile(): void {
+      this._globalService.updateUser(this.profile).subscribe(
+        (response: any) => {
+          console.log(response);
+          this.message = 'The user has been updated';
+        },
+        (error: any) => {
+          console.log(error);
+        }
+      );
     }
 }
